@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS Day3 Quiz01</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var v = ["test2", "test1", "test3", "test4", "test5", "test6", "test7", "test8"];
+		var x = 0;
+		window.onload = start = () =>{
+			if(x == v.length) x=1;
+			else x+=1;
+			document.getElementById("img").src = "test"+x+".jpg";
+			t = setTimeout(start, 1000);
+		}
+		
+		const stop = () => { clearInterval(t); }
+	</script>
+	
+	<img id="img" src="test1.jpg" onmouseover="stop()" onmouseout="start()">
+</body>
+</html>
