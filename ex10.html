@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS Day3 Page_10</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function test(){
+			//alert("test");
+			let id = document.getElementById("txt");
+			let fo = document.getElementById("fo");
+			if(id.value != ""){
+				fo.submit();
+			}else{
+				alert("값을 입력해주세요!!!");
+			}
+		}
+		
+		function test2(){
+			location.href="ex10.html";
+		}
+	</script>	
+
+	<form id="fo" action="ex10.html">
+		<input type="text" id="txt"><br>
+		<input type="button" onclick="test()" value="전송"><br>
+	</form>
+	
+	<hr> - 페이지 이동 방법 <br>
+	<input type="button" onclick="location.href='ex10.html'" value="클릭"><br>
+	<input type="button" onclick="test2()" value="클릭"><br>
+	<a href="ex10.html">이동</a>
+</body>
+</html>
